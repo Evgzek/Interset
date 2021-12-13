@@ -27,6 +27,24 @@ public class Interest {
             }
             System.out.println("Итоговый результат: " + a);
         }
+        if (destine == 2){
+            int period;
+            float first;
+            float end;
+            float interest;
+            System.out.println("Введите первое, последнее числа, период(ВАЖНО!!! период не отрицательный):");
+            period = p.nextInt();
+            first = p.nextFloat();
+            end = p.nextFloat();
+            if (period < 0) {
+                System.out.println("Введите НЕ отрицательный период");
+                return;
+            }
+            interest = (float) (Math.pow(end/first, (float)1/period) - 1) * 100;
+            System.out.println("Процент равен: " + interest);
+
+        }
+
 
     }
 
